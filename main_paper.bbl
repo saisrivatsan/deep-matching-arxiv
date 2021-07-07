@@ -1,0 +1,173 @@
+\begin{thebibliography}{10}
+
+\bibitem{AS98}
+A.~Abdulkadiroglu and T.~S{\"{o}}nmez.
+\newblock Random serial dictatorship and the core from random endowments in
+  house allocation problems.
+\newblock {\em Econometrica}, 66(3):689--702, 1998.
+
+\bibitem{APR2009}
+A.~{Abdulkadiro\u glu}, P.~A. Pathak, and A.~E. Roth.
+\newblock Strategyproofness versus efficiency in matching with indifferences:
+  Redesigning the {NYC} high school match.
+\newblock {\em {American Economic Review}}, 99:1954--1978, 2009.
+
+\bibitem{abdulkadiroglu2003school}
+A.~{Abdulkadiro\u glu} and T.~S{\"o}nmez.
+\newblock School choice: A mechanism design approach.
+\newblock {\em American Economic Review}, 93:729--747, 2003.
+
+\bibitem{alcalde1994top}
+J.~Alcalde and S.~Barber{\`a}.
+\newblock Top dominance and the possibility of strategy-proof stable solutions
+  to matching problems.
+\newblock {\em Economic Theory}, 4(3):417--435, 1994.
+
+\bibitem{alva2020impossibility}
+S.~Alva and V.~Manjunath.
+\newblock The impossibility of strategy-proof, {P}areto efficient, and
+  individually rational rules for fractional matching.
+\newblock {\em Games and Economic Behavior}, 119:15--29, 2020.
+
+\bibitem{Athey18}
+S.~Athey.
+\newblock {The Impact of Machine Learning on Economics}.
+\newblock In {\em {The Economics of Artificial Intelligence: An Agenda}}, NBER
+  Chapters, pages 507--547. National Bureau of Economic Research, Inc, 2018.
+
+\bibitem{BCKM13}
+E.~Budish, Y.-K. Che, F.~Kojima, and P.~Milgrom.
+\newblock Designing random allocation mechanisms: Theory and applications.
+\newblock {\em American Economic Review}, 103(2):585--623, April 2013.
+
+\bibitem{curry2020certifying}
+M.~J. Curry, P.~Chiang, T.~Goldstein, and J.~P. Dickerson.
+\newblock Certifying strategyproof auction networks.
+\newblock {\em CoRR}, abs/2006.08742, 2020.
+
+\bibitem{DubinsFreeman1981}
+L.~E. Dubins and D.~A. Freedman.
+\newblock {M}achiavelli and the {G}ale-{S}hapley algorithm.
+\newblock {\em American Mathematical Monthly}, 88:485--494, 1981.
+
+\bibitem{deep-auction19}
+P.~Duetting, Z.~Feng, H.~Narasimhan, D.~C. Parkes, and S.~S. Ravindranath.
+\newblock Optimal auctions through deep learning.
+\newblock In {\em Proceedings of the 36th International Conference on Machine
+  Learning, {ICML}}, pages 1706--1715, 2019.
+
+\bibitem{Erdil14}
+A.~Erdil.
+\newblock Strategy-proof stochastic assignment.
+\newblock {\em Journal of Economic Theory}, 151:146 -- 162, 2014.
+
+\bibitem{erdil2008s}
+A.~Erdil and H.~Ergin.
+\newblock What's the matter with tie-breaking? {I}mproving efficiency in school
+  choice.
+\newblock {\em American Economic Review}, 98(3):669--89, 2008.
+
+\bibitem{deep-budget}
+Z.~Feng, H.~Narasimhan, and D.~C. Parkes.
+\newblock Deep learning for revenue-optimal auctions with budgets.
+\newblock In {\em Proceedings of the 17th Conference on Autonomous Agents and
+  Multi-Agent Systems}, pages 354--362, 2018.
+
+\bibitem{GS62}
+D.~Gale and L.~S. Shapley.
+\newblock College admissions and the stability of marriage.
+\newblock {\em The American Mathematical Monthly}, 69(1):9--15, 1962.
+
+\bibitem{deep-facility}
+N.~Golowich, H.~Narasimhan, and D.~C. Parkes.
+\newblock Deep learning for multi-facility location mechanism design.
+\newblock In {\em Proceedings of the 27th International Joint Conference on
+  Artificial Intelligence}, pages 261--267, 2018.
+
+\bibitem{immorlica2015incentives}
+N.~Immorlica and M.~Mahdian.
+\newblock Incentives in large random two-sided markets.
+\newblock {\em ACM Transactions on Economics and Computation}, 3:\#14, 2015.
+
+\bibitem{kojima2009incentives}
+F.~Kojima and P.~A. Pathak.
+\newblock Incentives and stability in large two-sided matching markets.
+\newblock {\em American Economic Review}, 99:608--627, 2009.
+
+\bibitem{lee2016incentive}
+S.~Lee.
+\newblock Incentive compatibility of large centralized matching markets.
+\newblock {\em The Review of Economic Studies}, 84(1):444--463, 2016.
+
+\bibitem{TimoSven16}
+T.~Mennle and S.~Seuken.
+\newblock The pareto frontier for random mechanisms.
+\newblock In {\em Proceedings of the 2016 ACM Conference on Economics and
+  Computation}, EC '16, page 769, New York, NY, USA, 2016. Association for
+  Computing Machinery.
+
+\bibitem{mennle2021partial}
+T.~Mennle and S.~Seuken.
+\newblock Partial strategyproofness: Relaxing strategyproofness for the random
+  assignment problem.
+\newblock {\em Journal of Economic Theory}, 191:105--144, 2021.
+
+\bibitem{NarasimhanParkes16a}
+H.~Narasimhan, S.~Agarwal, and D.~C. Parkes.
+\newblock Automated mechanism design without money via machine learning.
+\newblock In {\em Proceedings of the 25th International Joint Conference on
+  Artificial Intelligence}, pages 433--439, 2016.
+
+\bibitem{pathak2008leveling}
+P.~A. Pathak and T.~S{\"o}nmez.
+\newblock Leveling the playing field: Sincere and sophisticated players in the
+  {B}oston mechanism.
+\newblock {\em American Economic Review}, 98(4):1636--1652, 2008.
+
+\bibitem{rahme2020permutationequivariant}
+J.~Rahme, S.~Jelassi, J.~Bruna, and S.~M. Weinberg.
+\newblock A permutation-equivariant neural network architecture for auction
+  design.
+\newblock {\em CoRR}, abs/2003.01497, 2020.
+
+\bibitem{Roth82}
+A.~E. Roth.
+\newblock The economics of matching: Stability and incentives.
+\newblock {\em Mathematics of Operations Research}, 7(4):617--628, 1982.
+
+\bibitem{RothPeranson99}
+A.~E. Roth and E.~Peranson.
+\newblock The redesign of the matching market for american physicians: Some
+  engineering aspects of economic design.
+\newblock {\em American Economic Review}, 89(4):748--780, September 1999.
+
+\bibitem{Roth93}
+A.~E. Roth, U.~G. Rothblum, and J.~H.~V. Vate.
+\newblock Stable matchings, optimal assignments, and linear programming.
+\newblock {\em Mathematics of Operations Research}, 18(4):803--828, 1993.
+
+\bibitem{RothSotomayor1990}
+A.~E. Roth and M.~Sotomayor.
+\newblock {\em Two-Sided Matching: A Study in Game-Theoretic Modeling and
+  Analysis}, volume~18 of {\em Econometric Society Monographs}.
+\newblock Cambridge University Press, 1990.
+
+\bibitem{STZ19}
+W.~Shen, P.~Tang, and S.~Zuo.
+\newblock Automated mechanism design via neural networks.
+\newblock In {\em Proceedings of the 18th International Conference on
+  Autonomous Agents and Multiagent Systems}, 2019.
+
+\bibitem{sonmez2011bidding}
+T.~S{\"o}nmez.
+\newblock Bidding for army career specialties: Improving the {ROTC} branching
+  mechanism.
+\newblock {\em Journal of Political Economy}, 121:186--219, 2013.
+
+\bibitem{sonmez2011matching}
+T.~S{\"o}nmez and T.~B. Switzer.
+\newblock Matching with (branch-of-choice) contracts at {United States Military
+  Academy}.
+\newblock {\em Econometrica}, 81:451--488, 2013.
+
+\end{thebibliography}

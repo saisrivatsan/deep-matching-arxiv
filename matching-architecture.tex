@@ -1,0 +1,187 @@
+%\documentclass{article}
+%\usepackage{tikz}
+%\usetikzlibrary{shapes}
+%\usetikzlibrary{calc}
+%
+%\begin{document}
+%
+%%%%MULTI-BUYER, MULTI-ITEM
+%\begin{figure}
+%\centering
+\begin{tikzpicture}[scale=0.7, transform shape, shorten >=1pt,->,draw=black!100, node distance=\layersep, thick]
+    \tikzstyle{input text}=[draw=white,minimum size=22pt,inner sep=0pt]
+    \tikzstyle{input neuron}=[circle,draw=black!100,minimum size=17pt,inner sep=0pt,thick]
+    \tikzstyle{hidden neuron}=[circle,draw=black!100,minimum size=25pt,inner sep=0pt,thick]
+    \tikzstyle{hidden text}=[draw=white,minimum size=22pt,inner sep=0pt,thick]
+    \tikzstyle{unit}=[circle,draw=black!100,minimum size=25pt,inner sep=0pt,thick]
+    \tikzstyle{squnit}=[draw=black!100,minimum size=20pt,inner sep=0pt,thick]
+     
+    \def\x{0.25}
+    % Draw the input layer nodes
+    \node[input text] (I-10) at (0,-0.65) {$\vdots$};
+    \node[input text] (I-20) at (0,-4.2) {$\vdots$};
+    \node[input neuron, pin={[pin edge={<-}]left:$p_{11}$}] (I-1) at (0,0) {};
+    \node[input neuron, pin={[pin edge={<-}]left:$p_{nm}$}] (I-2) at (0,-1.5) {};
+    \node[input neuron, pin={[pin edge={<-}]left:$q_{11}$}] (I-3) at (0,-3.5) {};
+	\node[input neuron, pin={[pin edge={<-}]left:$q_{nm}$}] (I-4) at (0,-5) {};  
+	
+	\node[hidden text] (temp-1) at (-0.6, 0.75) {$\beta$};
+    \node[hidden text] (temp-1) at (-0.6, -0.75) {$\beta$};
+    \node[hidden text] (temp-1) at (-0.6, -2.75) {$\beta$};
+    \node[hidden text] (temp-1) at (-0.6, -4.25) {$\beta$};
+    
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (-0.05, 0.25)  -- (-0.55, 0.75 + 0.05); 
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (-0.05, -1.25)  -- (-0.55, -0.75 + 0.05); 
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (-0.05, -3.25)  -- (-0.55, -2.75 + 0.05); 
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (-0.05, -4.75)  -- (-0.55, -4.25 + 0.05);
+	
+	
+	\node[input text] (temp-1111) at (2.25, -2.5) {$\ldots$};
+
+    % Draw the hidden layer nodes
+    \path node[hidden text] (H-0) at (1.5,-3.25) {\vdots};
+    \path node[hidden neuron] (H-1) at (1.5,-0.5) {$h^{(1)}_1$};
+    \path node[hidden neuron] (H-2) at (1.5,-2) {$h^{(1)}_2$};
+    \path node[hidden neuron] (H-3) at (1.5,-4.5) {$h^{(1)}_{J_1}$};
+    
+    
+    \foreach \dest in {1,...,3}
+    	\foreach \src in {1,...,4}
+			\path (I-\src) edge (H-\dest); 		
+    
+    % Draw the hidden layer nodes
+    \path node[hidden text] (J-0) at (3,-3.25) {\vdots};
+    \path node[hidden neuron] (J-1) at (3,-0.5) {$h^{(R)}_1$};
+    \path node[hidden neuron] (J-2) at (3,-2) {$h^{(R)}_2$};
+    \path node[hidden neuron] (J-3) at (3,-4.5) {$h^{(R)}_{J_{R}}$};
+    
+    
+    \node[input text] (S-10) at (4.55,-0.65) {$\vdots$};
+    \node[input text] (S-20) at (4.55,-4.2) {$\vdots$};
+    \path node[unit] (S-1) at (4.55,-0) {$s_{11}$};
+    \path node[unit] (S-2) at (4.55,-1.5) {$s_{n+1m}$};
+    \path node[unit] (S-3) at (4.55,-3.5) {$s'_{11}$};
+    \path node[unit] (S-4) at (4.55,-5.0) {$s'_{nm+1}$};
+    
+    
+    
+     \foreach \src in {1,...,3}
+		\foreach \dest in {1,...,4}
+			\path (J-\src) edge (S-\dest); 
+    
+
+    \path node[squnit] (T-1) at (5.75,-0) {$\sigma_+$};
+    \path node[squnit] (T-2) at (5.75,-1.5) {$\sigma_+$};
+    \path node[squnit] (T-3) at (5.75,-3.5) {$\sigma_+$};
+    \path node[squnit] (T-4) at (5.75,-5.0) {$\sigma_+$};
+    
+    \node[input text] (T-10) at (5.75,-0.65) {$\vdots$};
+    \node[input text] (T-20) at (5.75,-4.2) {$\vdots$};
+    
+    \foreach \src in {1,...,4}
+			\path (S-\src) edge (T-\src); 
+			
+	\path node[input neuron] (U-1) at (\x +7.0,0.5-0) {$\times$};
+    \path node[input neuron] (U-2) at (\x +7.0,-0.25-1.5) {$\times$};
+    \path node[input neuron] (U-3) at (\x +7.0,-0.25-3.5) {$\times$};
+    \path node[input neuron] (U-4) at (\x +7.0,-0.25-5.0) {$\times$};
+    
+    \node[hidden text] (temp-1) at (6.5, 1.25) {$\beta$};
+    \node[hidden text] (temp-1) at (6.5, -1.0) {$\beta$};
+    \node[hidden text] (temp-1) at (6.5, -3.0) {$\beta$};
+    \node[hidden text] (temp-1) at (6.5, -4.5) {$\beta$};
+    
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (7.05, 0.75)  -- (6.55, 1.25 + 0.05); 
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (7.05, -1.5)  -- (6.55, -1.0 + 0.05); 
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (7.05, -3.5)  -- (6.55, -3.0 + 0.05); 
+	\draw[<-,solid,line width=0.5mm,dotted,color=gray] (7.05, -5.0)  -- (6.55, -4.5 + 0.05);
+    
+     \foreach \src in {1,...,4}
+			\path (T-\src) edge (U-\src);
+    
+    \path node[hidden neuron] (V-1) at (\x +8.25,0.5-0) {$\bar s_{11}$};
+    \path node[hidden neuron] (V-2) at (\x +8.25,0.5-1.5) {$\bar s_{n1}$};
+    \path node[hidden neuron] (V-25) at (\x +8.25,0.5-2.75) {$\bar s_{\bot 1}$};
+    \path node[hidden neuron] (V-3) at (\x +8.25,0.25-4.0) {$\bar s'_{11}$};
+    \path node[hidden neuron] (V-4) at (\x +8.25,0.25-5.5) {$\bar s'_{n1}$};
+    %\node[input text] (V-10) at (\x +8.25,-0.65) {$\vdots$};
+    %\node[input text] (V-10) at (\x +8.25,-4.2) {$\vdots$};
+    
+    
+	\path (U-1) edge (V-1);
+	\path (U-2) edge (V-25);
+	\path (U-3) edge (V-3);
+	\path (U-4) edge (V-4);
+	
+			
+	\path node[hidden neuron] (W-1) at (\x +10.25,0.5-0) {$\bar s_{1m}$};
+    \path node[hidden neuron] (W-2) at (\x +10.25,0.5-1.5) {$\bar s_{nm}$};
+    \path node[hidden neuron] (W-25) at (\x +10.25,0.5-2.75) {$\bar s_{\bot m}$};
+    \path node[hidden neuron] (W-3) at (\x +10.25,0.25-4.0) {$\bar s'_{1m}$};
+    \path node[hidden neuron] (W-4) at (\x +10.25,0.25-5.5) {$\bar s'_{nm}$};
+    \path node[hidden neuron] (W-35) at (\x +11.55,0.25-4.0) {$\bar s'_{1\bot}$};
+    \path node[hidden neuron] (W-45) at (\x +11.55,0.25-5.5) {$\bar s'_{n\bot}$};
+    
+    
+    %\node[input text] (W-100) at (\x +10.25,0.5-0.65) {$\vdots$};
+    %\node[input text] (W-200) at (\x +10.25,0.5-4.2) {$\vdots$};
+    
+    \node[input text] (W-11) at (\x +9.25,0.5-0) {$\ldots$};
+    \node[input text] (W-12) at (\x +9.25,0.5-1.5) {$\ldots$};
+    \node[input text] (W-13) at (\x +9.25,-0.25-3.5) {$\ldots$};
+    \node[input text] (W-14) at (\x +9.25,-0.25-5) {$\ldots$};
+    \node[input text] (W-15) at (\x +9.25,-1.5-0.65) {$\vdots$};
+    \node[input text] (W-16) at (\x +9.25,-0.25-4.2) {$\vdots$};
+    
+    
+    
+    \node[input text] (temp-111) at (\x +12.5+1.0,-0.65) {$\vdots$};
+    \node[input text] (temp-222) at (\x +12.5+1.0,-2.42) {$\vdots$};
+    \node[input text] (temp-333) at (\x +12.5+1.0,-4.2) {$\vdots$};
+    \path node[unit, pin={[pin edge={->}]right:$r_{11} = \min\{\hat{s}_{11},\hat{s}'_{11}\}$}] (X-1) at (\x +12.5+1.0,-0) {};
+    \path node[unit, pin={[pin edge={->}]right:$r_{n1} = \min\{\hat{s}_{n1},\hat{s}'_{n1}\}$}] (X-2) at (\x +12.5+1.0,-1.5) {};
+    \path node[unit, pin={[pin edge={->}]right:$r_{1m} = \min\{\hat{s}_{1m},\hat{s}'_{1m}\}$}] (X-3) at (\x +12.5+1.0,-3.5) {};
+    \path node[unit, pin={[pin edge={->}]right:$r_{nm} = \min\{\hat{s}_{nm},\hat{s}'_{nm}\}$}] (X-4) at (\x +12.5+1.0,-5) {};
+   
+			
+	\draw[thick,dotted] ($(X-1.north west)+(-0.2,0.3)$)  rectangle ($(X-4.south east)+(0.2,-0.3)$);
+	\draw[thick,dotted] ($(W-1.north west)+(-0.2,0.3)$)  rectangle ($(W-25.south east)+(0.2,-0.3)$);
+	\draw[thick,dotted] ($(V-1.north west)+(-0.2,0.3)$)  rectangle ($(V-25.south east)+(0.2,-0.3)$);
+	\draw[thick,dotted] ($(V-3.north west)+(-0.2,0.3)$)  rectangle ($(W-35.south east)+(0.2,-0.3)$);
+	\draw[thick,dotted] ($(V-4.north west)+(-0.2,0.3)$)  rectangle ($(W-45.south east)+(0.2,-0.3)$);
+	
+	\draw[thick,dashed] ($(V-1.north west)+(-0.3,0.4)$)  rectangle ($(W-2.south east)+(0.3,-0.4)$);
+	\draw[thick,dashed] ($(V-3.north west)+(-0.3,0.4)$)  rectangle ($(W-4.south east)+(0.3,-0.4)$);
+	
+	\node at  ($(W-16.west) + (0.3, -0.05-1.75)$) {$row-wise$};
+	\node at  ($(W-16.west) + (0.3, -0.05-2.0)$) {$normalization$};
+	
+	\node at  ($(V-1.east) + (0.3, +1.25)$) {$column-wise$};
+	\node at  ($(V-1.east) + (0.3, +1.0)$) {$normalization$};
+	
+	%\node[hidden text] (temp-111) at (\x +11.5,-1.1) {$\hat{s}$};
+    %\node[hidden text] (temp-222) at (\x +11.5,-3.95) {$\hat{s}'$};
+    
+    %\path[draw=black,solid,line width=1mm,fill=black] (\x +11,-1.0) -- (\x +12,-2);
+	%\path[draw=black,solid,line width=1mm,fill=black] (\x +11,-4.0) -- (\x +12,-3);
+	
+	\coordinate (LL1) at (\x +10.70,-0.35);
+    \coordinate (LL2) at (\x +12.5+0.5,-1.65);
+    
+    \coordinate (LL3) at (\x +10.70,-3.35);
+    \coordinate (LL4) at (\x +12.5+0.5,-2.30);
+    
+    \node[hidden text] (LL-5) at (12.5, -1.0) {$\hat{s}$};
+    \node[hidden text] (LL-5) at (12.5, -2.6) {$\hat{s}'$};
+
+
+	\draw [thick,black] (LL1) to[out=0,in=180] (LL2);
+	\draw [thick,black] (LL3) to[out=45,in=180] (LL4);
+    
+      
+   
+
+\end{tikzpicture}
+%\end{figure}
+%
+%\end{document}
